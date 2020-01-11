@@ -1,2 +1,2 @@
-`Base Image` **Ubuntu**
+`Base Image` **Ubuntu** <br/>
 `Output:` *hello world
