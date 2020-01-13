@@ -1,3 +1,5 @@
+You can directly download the image by run this command : `docker image pull sparshagrawal/java-version`
+
 `BaseImage` **openjdk:jdk-alpine**  <br/>
 `Output` <br/>
 *openjdk version "1.8.0_171" <br/>
