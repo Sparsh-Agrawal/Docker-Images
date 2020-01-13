@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+      image: "mysql"
+      environment:
+        - MYSQL_ROOT_PASSWORD=password
+      volumes:
+        - /dir/mysql:/var/lib/mysql
+  web:
+    image: "wordpress"
+    ports:
+      - "71:80"
+    environment:
+            - WORDPRESS_DB_PASSWORD=password
