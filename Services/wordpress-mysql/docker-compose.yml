@@ -1,0 +1,31 @@
+version: '3'
+services:
+        dbos:
+                image: mysql:5.7
+                volumes:
+                        - mysql_storage:/var/lib/mysql
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: root@123
+                        MYSQL_DATABASE: wordpressdb
+                        MYSQL_USER: usr
+                        MYSQL_PASSWORD: usr@123
+
+        wpos:
+                image: wordpress:5.1.1-php7.3-apache
+                depends_on:
+                        - dbos
+                ports:
+                        - 8081:80
+                volumes:
+                        - wordpress_storage:/var/www/html
+                restart: always
+                environment:
+                        WORDPRESS_DB_HOST: dbos
+                        WORDPRESS_DB_NAME: wordpressdb
+                        WORDPRESS_DB_USER: usr
+                        WORDPRESS_DB_PASSWORD: usr@123
+
+volumes:
+        mysql_storage:
+        wordpress_storage:
