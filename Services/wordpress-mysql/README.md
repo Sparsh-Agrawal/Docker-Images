@@ -5,4 +5,7 @@
 
 `For Docker volumes` <br/>
 ![](screen-shots/docker-volume.png)
+<br/><br/>
 
+`For Docker Info and IPs`
+![](screen-shots/docker-info-ip.png)
